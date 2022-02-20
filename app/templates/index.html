@@ -1,65 +1,112 @@
 <!doctype html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     {% block head %}
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
-        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 
         <title>{% block title %}{% endblock %}This is {{ name }} Website</title>
     {% endblock %}
 
 </head>
 <body>
-<div id="main_menu" class="red makeBigger">
-    <h1>Liming Zhou's Homepage</h1>
+<div class="container">
+    <div class="row">
+        <header class="mb-5">
+            <!-- As a link -->
+            <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Bootstrap Page</a>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="/about">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <div class="row border border-warning mb-3">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ url_for('static', filename='images/sample.jpeg') }}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='images/sample.jpeg') }}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='images/sample.jpeg') }}" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Card title1</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Card title2</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Card title3</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div id="main_content">
-    <p>
-        <span class="red makeBigger"> Lorem</span> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Feugiat in ante metus dictum at tempor commodo ullamcorper a. Viverra tellus in hac habitasse platea
-    dictumst. Vehicula ipsum a arcu cursus vitae. Justo laoreet sit amet cursus sit amet dictum. Luctus accumsan tortor
-    posuere ac. Dolor sit amet consectetur adipiscing elit duis. Sed cras ornare arcu dui vivamus arcu felis bibendum.
-    Mi ipsum faucibus vitae aliquet nec ullamcorper sit. Leo urna molestie at elementum eu facilisis sed odio morbi.
-    Interdum velit laoreet id donec ultrices tincidunt. Maecenas pharetra convallis posuere morbi. In tellus integer
-    feugiat scelerisque varius morbi enim nunc. Leo a diam sollicitudin tempor id eu. Vitae turpis massa sed elementum.
-    </p>
-    <p>
-        <span class="red makeBigger"> Enim</span> praesent elementum facilisis leo vel. Ut venenatis tellus in metus. Eget nulla facilisi etiam dignissim diam
-    quis enim. Id semper risus in hendrerit gravida rutrum quisque non. Nullam ac tortor vitae purus faucibus ornare
-    suspendisse sed nisi. Integer quis auctor elit sed. Ut placerat orci nulla pellentesque dignissim enim sit amet
-    venenatis. Eget nunc scelerisque viverra mauris. Nullam eget felis eget nunc lobortis mattis. Nisl condimentum id
-    venenatis a condimentum vitae sapien pellentesque habitant. Odio aenean sed adipiscing diam donec adipiscing. Ante
-    metus dictum at tempor commodo ullamcorper a lacus. Odio aenean sed adipiscing diam donec. Malesuada pellentesque
-    elit eget gravida cum sociis natoque. Vel eros donec ac odio tempor orci dapibus ultrices. Habitant morbi tristique
-    senectus et netus.
-</p>
-    <p>
-        <span class="red makeBigger">Arcu</span> cursus vitae congue mauris. Rhoncus urna neque viverra justo. Sed viverra tellus in hac habitasse. Egestas
-    fringilla phasellus faucibus scelerisque eleifend donec. Senectus et netus et malesuada fames ac turpis egestas
-    integer. Eget dolor morbi non arcu risus quis varius quam quisque. Rhoncus urna neque viverra justo nec ultrices dui
-    sapien. Enim blandit volutpat maecenas volutpat blandit aliquam. Nunc id cursus metus aliquam. Varius quam quisque
-    id diam vel quam elementum. Amet mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan.
-</p>
-    <p>
-        <span class="red makeBigger">Phasellus</span> vestibulum lorem sed risus. Malesuada fames ac turpis egestas. Interdum consectetur libero id faucibus
-    nisl. Est sit amet facilisis magna etiam. Vitae congue eu consequat ac felis. Eu sem integer vitae justo eget magna
-    fermentum. In arcu cursus euismod quis viverra nibh. Id donec ultrices tincidunt arcu non. Ultrices in iaculis nunc
-    sed. Aliquam etiam erat velit scelerisque in dictum non consectetur a. Donec ultrices tincidunt arcu non sodales
-    neque sodales ut. Nunc sed augue lacus viverra vitae congue eu consequat ac. Sit amet consectetur adipiscing elit
-    duis.
-</p>
-    <p>
-        <span class="red makeBigger">Sed</span> vulputate odio ut enim blandit volutpat maecenas. Volutpat ac tincidunt vitae semper quis lectus. Nibh venenatis
-    cras sed felis eget. Nunc lobortis mattis aliquam faucibus purus in massa. Egestas purus viverra accumsan in. Et
-    tortor at risus viverra adipiscing at in tellus. Elementum curabitur vitae nunc sed velit. Odio eu feugiat pretium
-    nibh ipsum consequat. Diam donec adipiscing tristique risus nec feugiat in. Porttitor leo a diam sollicitudin tempor
-    id eu. Pretium aenean pharetra magna ac placerat vestibulum lectus mauris ultrices. Est ultricies integer quis
-    auctor elit sed vulputate. Scelerisque eu ultrices vitae auctor eu augue ut lectus. Dignissim suspendisse in est
-    ante in nibh mauris. Nunc id cursus metus aliquam eleifend. Nunc eget lorem dolor sed viverra ipsum nunc. Ultrices
-    vitae auctor eu augue ut lectus arcu bibendum at. Vulputate mi sit amet mauris commodo.
-    </p>
-</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
 </body>
 </html>
